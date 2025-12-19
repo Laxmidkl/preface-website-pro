@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+
+*{
+  font-family: "Roboto", sans-serif;
+}
+
+@font-face {
+  font-family: 'Metricas';
+  src: url('./assets/fonts/Metricas.ttf') format('truetype');
+  font-weight: 400; /* Normal */
+  font-style: normal;
+}
+
+.font-metricas {
+  font-family: 'Metricas', sans-serif;
+}
