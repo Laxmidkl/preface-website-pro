@@ -12,7 +12,7 @@ export default function CallToActionSection() {
             Get Started Today
           </span>
 
-          <h2 className="mt-6 text-4xl md:text-4xl font-bold leading-tight">
+          <h2 className="mt-6 lg:text-4xl md:text-4xl font-bold leading-tight">
             Ready to Transform Your Business with Smart Technology?
           </h2>
 

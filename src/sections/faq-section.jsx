@@ -60,7 +60,7 @@ export default function FaqSection() {
                 }
                 className="w-full flex justify-between items-center text-left px-6 py-5 cursor-pointer"
               >
-                <h3 className="text-lg font-semibold text-gray-900">
+                <h3 className="lg:text-lg text-xs font-semibold text-gray-900">
                   {faq.question}
                 </h3>
 

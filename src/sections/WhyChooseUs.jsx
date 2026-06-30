@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
             Why Choose Us
           </p>
 
-          <h2 className="text-3xl font-bold mt-3 text-black">
+          <h2 className="lg:text-3xl text-xl font-bold mt-3 text-black">
             Why Choose Preface Technology?
           </h2>
         </div>
