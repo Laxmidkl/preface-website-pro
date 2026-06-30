@@ -1,128 +1,123 @@
-import { ArrowRight, Palette, Smartphone, Layout, Code, Sparkles, Zap, Shield, Users } from 'lucide-react';
+import {
+  Code2,
+  Smartphone,
+  Palette,
+  PenTool,
+  LaptopMinimalCheck,
+  BriefcaseBusiness,
+  ArrowRight,
+} from "lucide-react";
 
-export default function ServicesSection() {
+import banner from "../assets/img/banner.jpg";
+
+export default function OurServices() {
   const services = [
     {
-      name: "Web Development",
-      icon: Code,
-      description: "Custom web applications built with modern technologies. We create responsive, scalable, and high-performance websites that drive business growth.",
-      features: ["React/Next.js", "Node.js", "Responsive Design", "SEO Optimized"],
-      gradient: "from-blue-500 to-cyan-500",
-      delay: "0"
+      title: "Web Development",
+      icon: Code2,
+      description:
+        "Modern, scalable, and responsive websites tailored to your business.",
     },
     {
-      name: "Mobile App Development",
+      title: "Mobile App Development",
       icon: Smartphone,
-      description: "Native and cross-platform mobile applications for iOS and Android. User-centric design with seamless performance.",
-      features: ["React Native", "Flutter", "iOS & Android", "App Store Deployment"],
-      gradient: "from-purple-500 to-pink-500",
-      delay: "100"
+      description:
+        "Native and cross-platform mobile applications for Android and iOS.",
     },
     {
-      name: "UI/UX Design",
+      title: "UI/UX Design",
       icon: Palette,
-      description: "Beautiful and intuitive user interfaces that enhance user experience and drive engagement through thoughtful design.",
-      features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
-      gradient: "from-orange-500 to-red-500",
-      delay: "200"
+      description:
+        "Beautiful interfaces and seamless user experiences that users love.",
     },
     {
-      name: "Graphics Design",
-      icon: Layout,
-      description: "Creative visual design solutions including branding, marketing materials, and digital assets that tell your story.",
-      features: ["Brand Identity", "Print Design", "Social Media Graphics", "Illustration"],
-      gradient: "from-green-500 to-teal-500",
-      delay: "300"
+      title: "Graphics Design",
+      icon: PenTool,
+      description:
+        "Creative branding, social media graphics, brochures, and marketing materials.",
     },
     {
-      name: "Digital Transformation",
-      icon: Zap,
-      description: "Modernize your business processes with cutting-edge digital solutions that improve efficiency and productivity.",
-      features: ["Process Automation", "Cloud Solutions", "Digital Strategy", "System Integration"],
-      gradient: "from-yellow-500 to-orange-500",
-      delay: "400"
+      title: "Digital Transformation",
+      icon: LaptopMinimalCheck,
+      description:
+        "Helping businesses adopt modern technologies and digital solutions.",
     },
     {
-      name: "Consulting & Strategy",
-      icon: Users,
-      description: "Expert technology consulting to help you make informed decisions and build effective digital strategies.",
-      features: ["Tech Audit", "Strategy Planning", "Implementation Guide", "Performance Review"],
-      gradient: "from-indigo-500 to-purple-500",
-      delay: "500"
-    }
+      title: "Consulting & Strategy",
+      icon: BriefcaseBusiness,
+      description:
+        "Technology consulting and strategic planning to accelerate growth.",
+    },
   ];
 
   return (
-    <section id="services" className="relative py-20 px-4 sm:px-6 lg:px-8 scroll-mt-20 overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-green-500/40 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-green-500/40 rounded-full blur-3xl"></div>
+    <section className="bg-gray-50">
+      <div
+        className="relative h-[350px] md:h-[450px] bg-cover bg-center"
+        style={{ backgroundImage: `url(${banner})` }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        <div className="relative h-full flex items-center justify-center">
+          <div className="text-center px-6">
+            <span className="bg-green-500 text-white px-5 py-2 rounded-full text-sm font-semibold tracking-wider">
+              OUR SERVICES
+            </span>
+
+            <h1 className="text-4xl md:text-6xl font-bold text-white mt-6">
+              Innovative Digital Solutions
+            </h1>
+
+            <p className="text-gray-200 max-w-2xl mx-auto mt-5 text-lg">
+              We provide end-to-end software solutions that empower businesses
+              to innovate, grow, and succeed in the digital world.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-green-50 border border-green-200 text-green-700 text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4" />
-            Our Services
-          </div>
-          <h1 className="text-xl md:text-3xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-2">
-            What We Offer
-          </h1>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            Preface Technology Pvt. Ltd. builds digital solutions that streamline
-            operations and improve efficiency for businesses of all sizes.
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold text-gray-900">What We Offer</h2>
+
+          <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
+            From idea to deployment, we deliver reliable technology solutions
+            designed to help your business succeed.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={service.name}
-              className="group relative bg-white/70 backdrop-blur-sm cursor-pointer rounded-md border border-gray-200/50 p-8 transition-all duration-500 hover:scale-105"
-              style={{
-                animationDelay: `${service.delay}ms`,
-                animationFillMode: 'both'
-              }}
-            >
-              {/* Gradient Border Effect */}
-              <div className={`absolute inset-0 rounded-md bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`}>
-                <div className="absolute inset-[1px] rounded-md bg-white" />
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+
+            return (
+              <div
+                key={index}
+                className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-2"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center group-hover:bg-green-600 transition">
+                  <Icon
+                    size={30}
+                    className="text-green-600 group-hover:text-white transition"
+                  />
+                </div>
+
+                <h3 className="text-2xl font-bold mt-6 text-gray-900">
+                  {service.title}
+                </h3>
+
+                <p className="text-gray-600 mt-4 leading-7">
+                  {service.description}
+                </p>
+
+                <button className="mt-6 flex items-center gap-2 font-semibold text-green-600 hover:gap-3 transition-all">
+                  Learn More
+                  <ArrowRight size={18} />
+                </button>
               </div>
-
-              {/* Icon */}
-              <div className={`inline-flex items-center justify-center w-16 h-16 rounded-md bg-gradient-to-br ${service.gradient} shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon className="w-8 h-8 text-white" />
-              </div>
-
-              {/* Content */}
-              <h3 className="text-2xl font-bold text-gray-700 mb-4 group-hover:text-gray-500">
-                {service.name}
-              </h3>
-              
-              <p className="text-gray-600 leading-relaxed text-[14px] mb-6">
-                {service.description}
-              </p>
-
-              {/* Features List */}
-              <ul className="space-y-3 mb-8">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-500">
-                    <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.gradient} mr-3`} />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Hover Effect */}
-              <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 -z-10`} />
-            </div>
-          ))}
+            );
+          })}
         </div>
-
-       
       </div>
     </section>
   );

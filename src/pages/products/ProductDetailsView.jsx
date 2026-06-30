@@ -24,6 +24,7 @@ import {
   ChevronRight,
   ChevronLeft,
   ChevronDown,
+  KeyboardOff,
 } from "lucide-react";
 import dashboardImg from "../../assets/college/dashboard.jpg";
 import dashboardWatersupplyImg from "../../assets/watersupply/dashboard.jpg";
@@ -126,27 +127,6 @@ const productsData = {
         "AWS Hosting",
       ],
     },
-    // pricing: {
-    //   starter: {
-    //     name: "Starter",
-    //     price: "$499",
-    //     period: "month",
-    //     features: ["Up to 500 students", "Basic Features", "Email Support", "Cloud Hosting"]
-    //   },
-    //   professional: {
-    //     name: "Professional",
-    //     price: "$899",
-    //     period: "month",
-    //     features: ["Up to 2000 students", "All Features", "Phone & Email Support", "Custom Branding"],
-    //     popular: true
-    //   },
-    //   enterprise: {
-    //     name: "Enterprise",
-    //     price: "Custom",
-    //     period: "year",
-    //     features: ["Unlimited students", "Advanced Analytics", "Dedicated Support", "On-premise Option"]
-    //   }
-    // },
     testimonials: [
       {
         name: "Sarah Johnson",
@@ -435,7 +415,7 @@ export default function ProductPage() {
       {/* Hero Section */}
       <section
         className={`relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r ${getGradient(
-          product.color
+          product.color,
         )} text-white overflow-hidden`}
       >
         <div className="absolute inset-0 bg-black/20"></div>
@@ -465,7 +445,7 @@ export default function ProductPage() {
                 <button
                   onClick={() =>
                     alert(
-                      "This feature is not available. Please wait a few days."
+                      "This feature is not available. Please wait a few days.",
                     )
                   }
                   className="group bg-white text-gray-600 hover:bg-gray-50 cursor-pointer font-semibold py-2.5 px-8 rounded-md transition-all duration-300 hover:shadow-xl flex items-center gap-3"
@@ -476,7 +456,7 @@ export default function ProductPage() {
                 <button
                   onClick={() =>
                     alert(
-                      "This feature is not available. Please wait a few days."
+                      "This feature is not available. Please wait a few days.",
                     )
                   }
                   className="group border-2 border-white cursor-pointer text-white hover:bg-white/10 font-semibold py-2.5 px-8 rounded-md transition-all duration-300 flex items-center gap-3"
@@ -523,10 +503,9 @@ export default function ProductPage() {
                   <option key={tab} value={tab}>
                     {tab.charAt(0).toUpperCase() + tab.slice(1)}
                   </option>
-                )
+                ),
               )}
             </select>
-           
           </div>
 
           {/* Desktop Tabs */}
@@ -535,7 +514,6 @@ export default function ProductPage() {
               {["overview", "features", "specifications", "pricing"].map(
                 (tab) => {
                   const isActive = activeTab === tab;
-                  
 
                   return (
                     <button
@@ -546,7 +524,7 @@ export default function ProductPage() {
                       {tab.charAt(0).toUpperCase() + tab.slice(1)}
                     </button>
                   );
-                }
+                },
               )}
             </div>
           </div>
@@ -616,8 +594,6 @@ export default function ProductPage() {
           </div>
         </div>
       </section>
-
-      
 
       {/* Tab Content */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -952,3 +928,4 @@ const PricingTab = ({ product, getLightGradient }) => (
     )}
   </motion.div>
 );
+

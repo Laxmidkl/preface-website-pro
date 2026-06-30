@@ -1,108 +1,145 @@
-import { LaptopIcon, Building2Icon, UsersIcon, DropletsIcon, ArrowRightIcon } from 'lucide-react';
-import SectionTitle from '../components/section-title';
-import { Star } from 'lucide-react';
+import {
+  LaptopIcon,
+  Building2Icon,
+  UsersIcon,
+  DropletsIcon,
+  ArrowRightIcon,
+  CheckCircle2Icon,
+} from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductsSection() {
-    const products = [
-        {
-            title: 'School Management Software',
-            description: 'Manage students, staff, attendance, exams, and reports efficiently in one platform.',
-            icon: LaptopIcon,
-            gradient: 'from-blue-500 to-cyan-500',
-            features: ['Student Management', 'Attendance Tracking', 'Exam Scheduling', 'Report Generation'],
-            cta: 'Learn More'
-        },
-        {
-            title: 'Campus Management Software',
-            description: 'Streamline administrative processes for universities and colleges with automation and analytics.',
-            icon: Building2Icon,
-            gradient: 'from-purple-500 to-pink-500',
-            features: ['Administrative Automation', 'Analytics Dashboard', 'Resource Management', 'Fee Collection'],
-            cta: 'Explore Features'
-        },
-        {
-            title: 'Water Supply Management',
-            description: 'Efficiently monitor, manage, and optimize water supply operations for communities and municipalities.',
-            icon: DropletsIcon,
-            gradient: 'from-green-500 to-teal-500',
-            features: ['Real-time Monitoring', 'Distribution Management', 'Billing System', 'Maintenance Tracking'],
-            cta: 'See Demo'
-        },
-        {
-            title: 'Cooperative Software',
-            description: 'Manage members, accounts, transactions, and reports for cooperatives seamlessly.',
-            icon: UsersIcon,
-            gradient: 'from-orange-500 to-red-500',
-            features: ['Member Management', 'Account Tracking', 'Transaction Processing', 'Financial Reports'],
-            cta: 'Get Started'
-        },
-    ];
+  const navigate = useNavigate();
 
-    return (
-        <section>
-            <div className="container mx-auto px-4">
-                <SectionTitle
-                    title="Our Products"
-                    subtitle="Innovative Solutions"
-                    description="Preface Technology Pvt. Ltd. offers cutting-edge software solutions to help organizations operate efficiently and scale effectively."
-                    alignment="center"
-                />
-                
-                <div className="mt-20 grid gap-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 mx-auto">
-                    {products.map((product, index) => (
-                        <div
-                            key={index}
-                            className="group relative bg-white rounded-lg cursor-pointer transition-all duration-500 overflow-hidden border-2 border-gray-200 hover:border-transparent"
-                        >
-                            {/* Gradient Background Effect */}
-                            <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                            
-                            {/* Icon Container */}
-                            <div className="relative z-10 p-8 pb-6">
-                                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-sm bg-gradient-to-br ${product.gradient} group-hover:scale-110 transition-transform duration-300`}>
-                                    <product.icon className="w-8 h-8 text-white" />
-                                </div>
-                            </div>
+  const products = [
+    {
+      title: "School Management System",
+      description:
+        "Manage students, staff, attendance, exams, and reports efficiently in one platform.",
+      icon: LaptopIcon,
+      features: [
+        "Student Management",
+        "Attendance Tracking",
+        "Exam Scheduling",
+        "Report Generation",
+      ],
+      cta: "See Demo",
+      link: "/products/school-management",
+    },
+    {
+      title: "Campus Management System",
+      description:
+        "Streamline administrative processes for universities and colleges with automation and analytics.",
+      icon: Building2Icon,
+      features: [
+        "Administrative Automation",
+        "Analytics Dashboard",
+        "Resource Management",
+        "Fee Collection",
+      ],
+      cta: "See Demo",
+      link: "/products/campus-solutions",
+    },
+    {
+      title: "Water Supply Billing",
+      description:
+        "Efficiently monitor, manage, and optimize water supply operations for communities and municipalities.",
+      icon: DropletsIcon,
+      features: [
+        "Real-time Monitoring",
+        "Distribution Management",
+        "Billing System",
+        "Maintenance Tracking",
+      ],
+      cta: "See Demo",
+      link: "/products/water-supply",
+    },
+    {
+      title: "Cooperative System",
+      description:
+        "Manage members, accounts, transactions, and reports for cooperatives seamlessly.",
+      icon: UsersIcon,
+      features: [
+        "Member Management",
+        "Account Tracking",
+        "Transaction Processing",
+        "Financial Reports",
+      ],
+      cta: "See Demo",
+      link: "/products/cooperative-software",
+    },
+  ];
 
-                            {/* Content */}
-                            <div className="relative z-10 p-8 pt-0">
-                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">
-                                    {product.title}
-                                </h3>
-                                
-                                <p className="text-gray-600 leading-relaxed text-sm mb-6">
-                                    {product.description}
-                                </p>
+  return (
+    <section>
+      <div className="container mx-auto px-4">
+        <div className="text-center max-w-3xl mx-auto">
+          <span className="inline-block rounded-full bg-green-50 text-green-600 px-4 py-1 mt-20 text-sm font-semibold uppercase tracking-wide">
+            Our Products
+          </span>
 
-                                {/* Features List */}
-                                <ul className="space-y-2 mb-6">
-                                    {product.features.map((feature, featureIndex) => (
-                                        <li key={featureIndex} className="flex items-center text-sm text-gray-500">
-                                            <Star className={`mr-3 size-4`} />
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
+          <h2 className="mt-5 text-4xl md:text-4xl font-bold text-gray-900">
+            Innovative Software Solutions
+          </h2>
 
-                                {/* CTA Button */}
-                                <button onClick={() =>
-                    alert(
-                      "This feature is not available. Please wait a few days."
-                    )
-                  } className="group/btn w-full flex items-center justify-center gap-2 py-2 px-6 text-sm rounded-md border border-gray-200 hover:border-transparent bg-gray-50 hover:bg-gradient-to-r hover:from-white hover:to-gray-50 text-gray-700 hover:text-gray-900 font-medium transition-all duration-300">
-                                    {product.cta}
-                                    <ArrowRightIcon className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                                </button>
-                            </div>
+          <p className="mt-5 leading-8 text-gray-500">
+            Discover powerful, reliable, and scalable software products designed
+            to simplify operations, improve productivity, and accelerate digital
+            transformation across schools, campuses, cooperatives, and water
+            supply organizations.
+          </p>
+        </div>
 
-                            {/* Hover Border Effect */}
-                            <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${product.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`}>
-                                <div className="absolute inset-[2px] rounded-3xl bg-white" />
-                            </div>
-                        </div>
-                    ))}
+        {/* Only change: grid-cols-1 added */}
+        <div className="mt-20 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="group bg-white hover:bg-green-50/30 rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 p-8 flex flex-col h-full"
+            >
+              {/* Icon Container */}
+              <div className="relative z-10 pb-1">
+                <div className="w-16 h-16 rounded-2xl bg-green-600 flex items-center justify-center">
+                  <product.icon className="w-9 h-9 text-white" />
                 </div>
+              </div>
+
+              {/* Content */}
+              <div className="mt-8 flex flex-col flex-1">
+                <h3 className="text-xl font-semibold text-gray-900 leading-snug truncate">
+                  {product.title}
+                </h3>
+
+                <p className="mt-4 text-gray-400 font-mono !font-normal text-sm leading-6">
+                  {product.description}
+                </p>
+
+                {/* Features List */}
+                <ul className="my-4 space-y-4">
+                  {product.features.map((feature, index) => (
+                    <li
+                      key={index}
+                      className="flex items-center gap-1 text-sm text-gray-600"
+                    >
+                      <CheckCircle2Icon className="w-4 h-4 text-gray-500" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA Button */}
+                <button
+                  onClick={() => navigate(product.link)}
+                  className="mt-auto flex items-center justify-center cursor-pointer gap-2 rounded-xl border border-gray-200 py-3 font-medium hover:bg-gray-50 transition"
+                >
+                  {product.cta}
+                  <ArrowRightIcon className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                </button>
+              </div>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

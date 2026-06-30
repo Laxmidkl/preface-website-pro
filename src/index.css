@@ -7,6 +7,9 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
 @font-face {
   font-family: 'Metricas';
   src: url('./assets/fonts/Metricas.ttf') format('truetype');

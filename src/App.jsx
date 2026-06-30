@@ -8,6 +8,7 @@ import AboutPageView from './pages/AboutPageView';
 import ContactPageView from './pages/ContactPageView';
 import SericesPageView from './pages/SericesPageView';
 import ProductPage from './pages/products/ProductDetailsView';
+import TeamMember from './pages/products/TeamMember';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/contact-us" element={<ContactPageView />} />
         <Route path="/services" element={<SericesPageView />} />
         <Route path="/products/:productId" element={<ProductPage />} />
+        <Route path='/team-member' element={<TeamMember/>}/>
 
       </Routes>
       <Footer />

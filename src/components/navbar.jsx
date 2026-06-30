@@ -15,7 +15,8 @@ import { CircleArrowRight } from "lucide-react";
 import { Sun } from "lucide-react";
 import { Moon } from "lucide-react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,6 +62,7 @@ export default function Navbar() {
     },
     { name: "Services", href: "/services" },
     { name: "Contact Us", href: "/contact-us" },
+    // { name: "Team ", href: "/team-member" },
   ];
 
   return (
@@ -131,14 +133,18 @@ export default function Navbar() {
                 </div>
               </div>
             ) : (
-              <Link
+              <NavLink
                 key={link.name}
                 to={link.href}
-                className="transition hover:text-black"
+                className={({ isActive }) =>
+                  `transition ${
+                    isActive ? "text-green-600 font-semibold" : " text-gray-700"
+                  }`
+                }
               >
                 {link.name}
-              </Link>
-            )
+              </NavLink>
+            ),
           )}
         </div>
         <Link to={"/"}>
@@ -209,7 +215,7 @@ export default function Navbar() {
                     <button
                       onClick={() =>
                         setOpenDropdown(
-                          openDropdown === link.name ? null : link.name
+                          openDropdown === link.name ? null : link.name,
                         )
                       }
                       className="flex w-full items-center justify-between pl-3 text-md font-medium text-gray-900 transition-all hover:text-green-600 active:scale-95"

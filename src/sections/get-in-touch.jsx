@@ -1,199 +1,189 @@
-import SectionTitle from "../components/section-title";
 import {
-  ArrowUpRight,
-  Send,
+  CheckCircle,
+  User,
   Mail,
   Phone,
+  Building2,
+  MessageSquare,
+  Send,
   MapPin,
-  Clock,
-  MessageCircle,
-  Sparkles,
 } from "lucide-react";
-import { motion } from "framer-motion";
-import { useState } from "react";
 
 export default function GetInTouch() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: "Email Us",
-      details: "prefacetechnology@gmail.com",
-      subtitle: "Send us an email anytime",
-      gradient: "from-blue-500 to-cyan-500",
-    },
-    {
-      icon: Phone,
-      title: "Call Us",
-      details: "071-445564, 985-7079054",
-      subtitle: "Sun to Fri, 10am to 4pm",
-      gradient: "from-purple-500 to-pink-500",
-    },
-    {
-      icon: MapPin,
-      title: "Visit Us",
-      details: "Butwal-13 Rupandehi, Nepal",
-      subtitle: "Come say hello at our office",
-      gradient: "from-orange-500 to-red-500",
-    },
-    {
-      icon: Clock,
-      title: "Response Time",
-      details: "Within 24 hours",
-      subtitle: "We'll get back to you quickly",
-      gradient: "from-green-500 to-teal-500",
-    },
-  ];
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-
-    // Handle successful submission here
-    console.log("Form submitted!");
-  };
-
   return (
-    <section
-      className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white"
-      id="contact"
-    >
-      {/* Background Elements */}
-     
+    <section className="bg-[#F8FBF8] py-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left Content */}
+          <div>
+            <h2 className="text-3xl lg:text-4xl font-bold leading-tight text-gray-900">
+              Talk to an
+              <br />
+              <span className="text-green-600 italic font-serif">
+                Expert
+              </span>{" "}
+              Today
+            </h2>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-green-50 border border-green-200 text-green-700 text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4" />
-            Get in Touch
-          </div>
-          <h1 className="text-xl md:text-3xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-2">
-            Let's Start a Conversation
-          </h1>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            Ready to bring your ideas to life? We'd love to hear from you. Send
-            us a message and let's create something amazing together.
-          </p>
-        </div>
-        <div className="grid lg:grid-cols-2 gap-12 mt-16 max-w-6xl mx-auto">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Let's talk about your project
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                We're here to help you transform your vision into reality.
-                Whether you have a specific project in mind or just want to
-                explore possibilities, we're excited to hear from you.
-              </p>
-            </div>
+            <p className="mt-6 text-gray-600 text-lg  max-w-md">
+              Get in touch with our team for software development, web
+              applications, mobile apps, and digital solutions.
+            </p>
 
-            {/* Contact Methods Grid */}
-            <div className="grid sm:grid-cols-2 gap-6">
-              {contactInfo.map((item, index) => (
-                <div className="group p-6 bg-white rounded-md border border-gray-200 hover:border-green-500 cursor-pointer transition-all duration-300">
-                  <div
-                    className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${item.gradient} shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <item.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-900 font-medium text-sm mb-1">
-                    {item.details}
-                  </p>
-                  <p className="text-gray-500 text-sm italic">{item.subtitle}</p>
+            <div className="mt-12 space-y-5">
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
-              ))}
+
+                <div>
+                  <h4 className="font-semibold text-lg text-gray-900">
+                    Expert Software Team
+                  </h4>
+
+                  <p className="text-gray-500 mt-1">
+                    Experienced developers delivering scalable solutions.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-lg text-gray-900">
+                    Secure & Reliable
+                  </h4>
+
+                  <p className="text-gray-500 mt-1">
+                    Modern technologies with security as our priority.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-lg text-gray-900">
+                    Fast Response
+                  </h4>
+
+                  <p className="text-gray-500 mt-1">
+                    We usually reply within one business day.
+                  </p>
+                </div>
+              </div>
             </div>
+
+            {/* Company Info Cards */}
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-md border border-gray-200 sm:p-8 p-3 lg:p-10">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="font-medium text-gray-900">
-                    Your name *
-                  </label>
+          <div className="bg-white rounded-[30px] p-10 shadow-xl border border-gray-100">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-8">
+              Please enter your information
+            </h3>
+
+            <form className="space-y-5">
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div className="relative">
+                  <User className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
                   <input
-                    name="name"
                     type="text"
-                    required
-                    placeholder="Enter your full name"
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 outline-none"
+                    placeholder="Full Name"
+                    className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-500 outline-none"
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="font-medium text-gray-900">
-                    Email address *
-                  </label>
+
+                <div className="relative">
+                  <Mail className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
                   <input
-                    name="email"
                     type="email"
-                    required
-                    placeholder="Enter your email"
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 outline-none"
+                    placeholder="Email"
+                    className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-500 outline-none"
                   />
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label className="font-medium text-gray-900">Subject</label>
-                <input
-                  name="subject"
-                  type="text"
-                  placeholder="What's this about?"
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 outline-none"
-                />
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div className="relative">
+                  <Phone className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Phone"
+                    className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-500 outline-none"
+                  />
+                </div>
+
+                <div className="relative">
+                  <Building2 className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Company"
+                    className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-green-500 outline-none"
+                  />
+                </div>
               </div>
 
-              <div className="space-y-2">
-                <label className="font-medium text-gray-900">
-                  Message *
-                </label>
+              <div className="relative">
+                <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+
                 <textarea
-                  name="message"
-                  rows={6}
-                  required
-                  placeholder="Tell us about your project, ideas, or questions..."
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 resize-none outline-none"
-                />
+                  rows="6"
+                  placeholder="Tell us about your project..."
+                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 resize-none focus:ring-2 focus:ring-green-500 outline-none"
+                ></textarea>
               </div>
 
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`w-full flex items-center justify-center gap-3 sm:py-4 py-2 px-8 rounded-sm cursor-pointer font-semibold text-white transition-all duration-300 ${
-                  isSubmitting
-                    ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-gradient-to-r from-green-600 to-green-600 hover:from-green-700 hover:to-green-700"
-                }`}
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    Send Message
-                    <Send className="w-5 h-5" />
-                  </>
-                )}
+              <button className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-gradient-to-r from-green-500 to-green-700 text-white font-semibold hover:scale-[1.02] transition duration-300">
+                <Send size={18} />
+                Send Message
               </button>
-
-              <p className="text-center text-gray-500 text-sm">
-                We'll get back to you within 24 hours
-              </p>
             </form>
+          </div>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-5">
+          {/* Email */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition duration-300">
+            <div className="w-14 h-14 mx-auto rounded-full bg-green-100 flex items-center justify-center">
+              <Mail className="w-7 h-7 text-green-600" />
+            </div>
+
+            <h4 className="mt-5 font-semibold text-lg text-gray-900">Email</h4>
+
+            <p className="mt-2 text-sm text-gray-500 break-all">
+              prefacetechnology@gmail.com
+            </p>
+          </div>
+
+          {/* Phone */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition duration-300">
+            <div className="w-14 h-14 mx-auto rounded-full bg-green-100 flex items-center justify-center">
+              <Phone className="w-7 h-7 text-green-600" />
+            </div>
+
+            <h4 className="mt-5 font-semibold text-lg text-gray-900">Phone</h4>
+
+            <p className="mt-2 text-sm text-gray-500">+977 985-7079054</p>
+          </div>
+
+          {/* Location */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition duration-300">
+            <div className="w-14 h-14 mx-auto rounded-full bg-green-100 flex items-center justify-center">
+              <MapPin className="w-7 h-7 text-green-600" />
+            </div>
+
+            <h4 className="mt-5 font-semibold text-lg text-gray-900">
+              Location
+            </h4>
+
+            <p className="mt-2 text-sm text-gray-500">Butwal, Nepal</p>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ import logo from "../assets/img/logo.png";
 
 export default function Footer() {
   return (
-    <footer className="px-4 pt-10 mt-20 text-gray-600 border-t border-gray-200/60 md:px-16 lg:px-24">
+    <footer className="px-4 pt-10 text-gray-600 border-t border-gray-200/60 md:px-16 lg:px-24">
       <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:gap-12">
         <div className="flex-1">
           <div className="flex items-center gap-3">
@@ -35,7 +35,7 @@ export default function Footer() {
           </p>
           <div className="mt-2 flex items-center gap-3 text-gray-400">
             <a
-              href="https://www.youtube.com/@prefacetechnology"
+              href="https://www.facebook.com/profile.php?id=61565032785498"
               aria-label="YouTube"
               title="YouTube"
             >

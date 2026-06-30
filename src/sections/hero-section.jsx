@@ -1,6 +1,8 @@
 import { ArrowRightIcon, CheckIcon, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
+  const navigate = useNavigate();
   const specialFeatures = [
     "Trusted by 500+ cilents",
     "End-to-end digital solutions",
@@ -50,10 +52,8 @@ export default function HeroSection() {
         />
       </svg>
       <div className="absolute sm:block hidden top-28 xl:top-10 -z-10 left-1/4 size-72 sm:size-96 xl:size-120 2xl:size-132 bg-green-100 blur-[100px] opacity-30"></div>
-      <a
-        href="https://prebuiltui.com"
-        className="mt-32 flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium transition hover:bg-gray-100/80"
-      >
+
+      <div className="lg:mt-30 mt-16 flex items-center gap-2 rounded-full cursor-none border border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium transition hover:bg-gray-100/80">
         <svg
           width="16"
           height="16"
@@ -77,10 +77,9 @@ export default function HeroSection() {
           </defs>
         </svg>
         <p className="flex items-center gap-1 sm:text-sm text-xs">
-          <span>Powering digital transformation</span>
-          <ChevronRight className="size-4" />
+          <span>Empowering businesses through technology</span>
         </p>
-      </a>
+      </div>
 
       <h1 className="mt-4 max-w-3xl scale-105 bg-gradient-to-r from-green-950 to-[#748298] bg-clip-text text-center sm:text-4xl/12 text-3xl font-bold text-transparent md:scale-100 md:text-6xl/20">
         {" "}
@@ -94,12 +93,10 @@ export default function HeroSection() {
       </p>
 
       <button
-        onClick={() =>
-          alert("This feature is not available. Please wait a few days.")
-        }
+        onClick={() => navigate("/services")}
         className="mt-8 flex items-center gap-2 rounded-full bg-green-500 px-8 sm:py-2.5 py-2 font-medium text-white transition hover:opacity-90"
       >
-        <span>Get a free demo</span>
+        <span>Explore Services</span>
         <ArrowRightIcon className="size-5" />
       </button>
 
