@@ -1,10 +1,10 @@
-import banner from "../assets/img/banner.jpg";
 import webImg from "../assets/img/web.jpg";
 import mobileImg from "../assets/img/mobile.jpg";
 import ecommerceImg from "../assets/img/ecommerce.jpg";
 import cloudImg from "../assets/img/cloud.jpg";
 import digitalImg from "../assets/img/digital.jpg";
 import consultingImg from "../assets/img/consulting.jpg";
+import Banner, { bannerData } from "../components/Banner";
 
 export default function OurServices() {
   const services = [
@@ -22,12 +22,13 @@ export default function OurServices() {
         "Native and cross-platform mobile applications for Android and iOS.",
       tags: ["Flutter", "React Native", "Swift"],
     },
-   {
-  title: "E-commerce Solutions",
-  image: ecommerceImg,
-  description: "Custom online stores, payment gateways, and marketplace platforms.",
-  tags: ["Shopify", "Magento", "Custom"]
-},
+    {
+      title: "E-commerce Solutions",
+      image: ecommerceImg,
+      description:
+        "Custom online stores, payment gateways, and marketplace platforms.",
+      tags: ["Shopify", "Magento", "Custom"],
+    },
     {
       title: "Cloud Solutions",
       image: cloudImg,
@@ -54,26 +55,10 @@ export default function OurServices() {
   return (
     <section className="bg-gray-50">
       {/* Hero Banner */}
-      <div
-        className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] bg-cover bg-center"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-
+      <div>
         <div className="relative h-full flex items-center justify-center px-4 sm:px-6">
-          <div className="text-center max-w-4xl mx-auto">
-            <span className="bg-green-500 text-white px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wider inline-block">
-              OUR SERVICES
-            </span>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4 sm:mt-6 leading-tight">
-              Innovative Digital Solutions
-            </h1>
-
-            <p className="text-gray-200 max-w-2xl mx-auto mt-3 sm:mt-5 text-sm sm:text-base md:text-lg px-4 sm:px-0 leading-relaxed">
-              We provide end-to-end software solutions that empower businesses
-              to innovate, grow, and succeed in the digital world.
-            </p>
+          <div className="container text-center w-full">
+            <Banner {...bannerData.services} />
           </div>
         </div>
       </div>

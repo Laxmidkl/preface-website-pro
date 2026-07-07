@@ -8,7 +8,7 @@ import {
   Sparkles,
   TrendingUp,
 } from "lucide-react";
-
+import Banner, { bannerData } from "../components/Banner";
 export default function AboutUsPage() {
   const values = [
     {
@@ -43,8 +43,7 @@ export default function AboutUsPage() {
     },
     {
       title: "Integrity",
-      description:
-        "Operating with transparency and trust in every engagement.",
+      description: "Operating with transparency and trust in every engagement.",
       icon: Building2,
     },
   ];
@@ -52,21 +51,9 @@ export default function AboutUsPage() {
   return (
     <main className="overflow-x-hidden">
       {/* Hero */}
-      <section className="bg-gradient-to-b from-green-50 to-white py-12 sm:py-16 md:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl">
-          <span className="text-green-600 font-semibold uppercase tracking-wider text-sm sm:text-base">
-            About Us
-          </span>
-
-          <h1 className="mt-4 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
-            Building Practical Software for a Digital Future
-          </h1>
-
-          <p className="mt-4 sm:mt-6 text-gray-600 leading-7 sm:leading-8 text-sm sm:text-base">
-            Preface Technology is a Nepal-based software company dedicated to
-            building practical, modern software solutions for institutions and
-            businesses.
-          </p>
+      <section className="bg-gradient-to-b from-green-50 to-white ">
+        <div className="container  px-4 sm:px-6 lg:px-6 text-center w-full">
+          <Banner {...bannerData.about} />
         </div>
       </section>
 
@@ -104,13 +91,21 @@ export default function AboutUsPage() {
 
             <div className="grid grid-cols-2 gap-4 sm:gap-6 mt-8 sm:mt-10">
               <div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-green-600">100+</h3>
-                <p className="text-gray-600 text-sm sm:text-base">Industries Served</p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-green-600">
+                  100+
+                </h3>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  Industries Served
+                </p>
               </div>
 
               <div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-green-600">100%</h3>
-                <p className="text-gray-600 text-sm sm:text-base">Custom Solutions</p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-green-600">
+                  100%
+                </h3>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  Custom Solutions
+                </p>
               </div>
             </div>
           </div>
@@ -120,7 +115,7 @@ export default function AboutUsPage() {
       {/* Mission & Vision */}
       <section className="bg-gray-50 py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-6 sm:gap-8">
-          <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-200">
+          <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-200 hover:bg-green-50/40 hover:shadow-lg transition-all">
             <Target className="w-7 h-7 sm:w-8 sm:h-8 text-green-600" />
 
             <h3 className="mt-4 sm:mt-5 text-xl sm:text-2xl font-semibold">
@@ -128,14 +123,14 @@ export default function AboutUsPage() {
             </h3>
 
             <p className="mt-3 sm:mt-4 text-gray-600 leading-7 text-sm sm:text-base">
-              To deliver smart, accessible, and reliable software solutions
-              that help institutions and businesses across Nepal and beyond
-              operate more efficiently, serve their people better, and grow
-              with confidence.
+              To deliver smart, accessible, and reliable software solutions that
+              help institutions and businesses across Nepal and beyond operate
+              more efficiently, serve their people better, and grow with
+              confidence.
             </p>
           </div>
 
-          <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-200">
+          <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-200 hover:bg-green-50/40 hover:shadow-lg transition-all">
             <Eye className="w-7 h-7 sm:w-8 sm:h-8 text-green-600" />
 
             <h3 className="mt-4 sm:mt-5 text-xl sm:text-2xl font-semibold">
@@ -143,12 +138,12 @@ export default function AboutUsPage() {
             </h3>
 
             <p className="mt-3 sm:mt-4 text-gray-600 leading-7 text-sm sm:text-base">
-              To become South Asia's most trusted multi-sector software
-              partner, recognized for innovation, simplicity, and measurable
-              impact across education, finance, hospitality, and public
-              services.
+              To become South Asia's most trusted multi-sector software partner,
+              recognized for innovation, simplicity, and measurable impact
+              across education, finance, hospitality, and public services.
             </p>
           </div>
+
         </div>
       </section>
 

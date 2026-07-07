@@ -8,11 +8,15 @@ import {
   Send,
   MapPin,
 } from "lucide-react";
+import Banner, { bannerData } from "../components/Banner";
 
 export default function GetInTouch() {
   return (
-    <section className="bg-[#F8FBF8] py-12 sm:py-16 md:py-20 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#F8FBF8] ">
+       <div className="container   text-center  px-2  w-ful">
+            <Banner {...bannerData.contact} />
+          </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div>
